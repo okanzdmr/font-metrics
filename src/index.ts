@@ -26,7 +26,7 @@ class FontMetrics {
       const char = String.fromCharCode(charCode);
       const glyph = this.font.layout(char);
       const advanceWidth = glyph.advanceWidth;
-      widths.push(advanceWidth / 1000);
+      widths.push(advanceWidth / this.font.unitsPerEm);
     }
     return widths;
   }
